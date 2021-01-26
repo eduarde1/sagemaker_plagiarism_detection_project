@@ -11,7 +11,7 @@ import joblib
 
 ## TODO: Import any additional libraries you need to define a model
 
-from sklearn.naive_bayes import BernoulliNB
+from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.pipeline import make_pipeline
 
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     
 
     ## TODO: Define a model 
-    model = make_pipeline(MinMaxScaler(), BernoulliNB())
+    model = make_pipeline(MinMaxScaler(), GaussianNB())
     
     ## TODO: Train the model
     model.fit(train_x, train_y)
